@@ -3,25 +3,18 @@ import java.util.Scanner;
 
 public class Calc_media {
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int a, b, c;
+    public static void main(String[] args) {    
         
-        System.out.print("Digite o valor do segmento A: ");
-        a = sc.nextInt();
-        System.out.print("Digite o valor do segmento B: ");
-        b = sc.nextInt();
-        System.out.print("Digite o valor do segmento C: ");
-        c = sc.nextInt();
+        int x;
+        String palavra = "batata arroz maçã cheescake sonho brownie";
+        String[] palavras = palavra.split(" ");
         
-        if ((a < b + c) && (b < a + c) && (c < a + b)) {
-            System.out.print("É possível formar um triângulo");
-        } else {    
-            System.out.print("Não é possível formar um triângulo");
+        System.out.println("Palavras que começam com B: ");
+        
+        for (x=0; x<=5; x++) {
+            if (palavras[x].indexOf("b") == 0) {
+                System.out.println(palavras[x]);
+            }
         }
-        
-        sc.close();
-        
-        //cheguei em compostas
     }
 }
